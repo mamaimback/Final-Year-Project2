@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+class UserMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,23 +15,22 @@ class AdminMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next) //middleware to check if the user roles is 0 or 1 for admin
-    {
-        if(Auth::check())
+    public function handle(Request $request3, Closure $next3)
+    {if(Auth::check())
         {
-            if(Auth::user()->role_as ==1) //is admin
+            if(Auth::user()->role_as ==0) //is user
             {
-                return $next($request); //handle request
+                return $next3($request3); //handle request
             }
             else
             {
-                if(Auth::user()->role_as ==0) //is user
+                if(Auth::user()->role_as ==1) //is admin
                 {
-                return redirect('/user/home')->with('status','Access Denied! You are not admin'); //user trying to enter admin page
+                return redirect('/admin/dashboard')->with('status','Access Denied! You are not user'); //user admin trying to enter user page
                 }
 
                 else{
-                    return redirect('/doctor/testing')->with('status','Access Denied! You are not admin');  //for doctor triying to enter admin direct back to homepage
+                    return redirect('/doctor/testing')->with('status','Access Denied! You are not user');  //for doctor triying to enter admin direct back to homepage
                 }
             }
         }

@@ -19,13 +19,20 @@ class DoctorMiddleware
     {
         if(Auth::check())
         {
-            if(Auth::user()->role_as ==2) //is admin
+            if(Auth::user()->role_as ==2) //is doctor
             {
                 return $next2($request2); //handle request
             }
             else
             {
-                return redirect('/home')->with('status','Access Denied! You are not admin');
+                if(Auth::user()->role_as ==0) //is user
+                {
+                return redirect('/user/home')->with('status','Access Denied! You are not admin'); //user trying to enter doctor page
+                }
+
+                else{
+                    return redirect('/admin/dashboard')->with('status','Access Denied! You are not admin');  //for admin triying to enter doctor direct back to homepage
+                }
             }
         }
         else

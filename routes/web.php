@@ -9,12 +9,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/patientbookapp',[App\Http\Controllers\HomeController::class, 'p_index'])->name('patientbookapp');
-Route::get('/patientmakebooking/{doctorCategory_exDoctorID}',[App\Http\Controllers\HomeController::class, 'p_make_index'])->name('patientmakebooking');
-Route::get('/doctorsdetails',[App\Http\Controllers\HomeController::class, 'doc_detail_index'])->name('doctorsdetails');
-Route::post('/addconfirmedbooking',[App\Http\Controllers\BookingHistoryController::class, 'Bkstore'])->name('addconfirmedbooking');
+Route::prefix('user')->middleware(['auth','isUser'])->group(function() { 
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+    Route::get('/patientbookapp',[App\Http\Controllers\HomeController::class, 'p_index']);
+    Route::get('/patientmakebooking/{doctorCategory_exDoctorID}',[App\Http\Controllers\HomeController::class, 'p_make_index']);
+    Route::get('/doctorsdetails',[App\Http\Controllers\HomeController::class, 'doc_detail_index']);
+    Route::post('/addconfirmedbooking',[App\Http\Controllers\BookingHistoryController::class, 'Bkstore']);
 //Route::get('/testing',[App\Http\Controllers\HomeController::class, 'testing'])->name('testing');
+});
 
 //Route::get('/model',[])
 

@@ -37,7 +37,7 @@ class LoginController extends Controller
         }
         else if (Auth::user()->role_as == '0')
         {
-            return redirect('/home')->with('status', 'Logged in successful');
+            return redirect('user/home')->with('status', 'Logged in successful');
         }
 
         else if (Auth::user()->role_as == '2')

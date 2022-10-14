@@ -12,13 +12,13 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="/home">Home🏠   |</a>
+            <a class="nav-link" aria-current="page" href="{{url('user/home')}}">Home🏠   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/patientbookapp"> Book appointment📅   |</a>
+            <a class="nav-link" href="{{url('user/patientbookapp')}}"> Book appointment📅   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/doctorsdetails"> Doctors on-call🧑‍⚕️   |</a>
+            <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"> My appointment🗓️   |</a>
