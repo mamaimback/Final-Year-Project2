@@ -39,6 +39,11 @@ class LoginController extends Controller
         {
             return redirect('/home')->with('status', 'Logged in successful');
         }
+
+        else if (Auth::user()->role_as == '2')
+        {
+            return redirect('doctor/testing')->with('status', 'Logged in successful');
+        }
         else
         {
             return redirect('/');

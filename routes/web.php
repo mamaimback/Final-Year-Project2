@@ -14,7 +14,7 @@ Route::get('/patientbookapp',[App\Http\Controllers\HomeController::class, 'p_ind
 Route::get('/patientmakebooking/{doctorCategory_exDoctorID}',[App\Http\Controllers\HomeController::class, 'p_make_index'])->name('patientmakebooking');
 Route::get('/doctorsdetails',[App\Http\Controllers\HomeController::class, 'doc_detail_index'])->name('doctorsdetails');
 Route::post('/addconfirmedbooking',[App\Http\Controllers\BookingHistoryController::class, 'Bkstore'])->name('addconfirmedbooking');
-Route::get('/testing',[App\Http\Controllers\HomeController::class, 'testing'])->name('testing');
+//Route::get('/testing',[App\Http\Controllers\HomeController::class, 'testing'])->name('testing');
 
 //Route::get('/model',[])
 
@@ -55,5 +55,12 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //cal
     Route::put('update-user/{user_id}',[App\Http\Controllers\Admin\UserController::class,'update']);
 
     Route::post('delete-user',[App\Http\Controllers\Admin\UserController::class, 'destroy']);
+
+});
+
+Route::prefix('doctor')->middleware(['auth','isDoctor'])->group(function() { 
+
+    Route::get('/testing',[App\Http\Controllers\Doctor\DoctorHomeController::class,'testing']);
+
 
 });
