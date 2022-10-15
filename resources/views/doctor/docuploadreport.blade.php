@@ -63,9 +63,11 @@
                 <input type="text" name="venue"  value="{{$bookingHistory->venue}}" class="form-control" readonly="readonly">
             </div>
 
-        
+            <div class= "mb-3">
+                <label for="">Report (pdf format)</label>
+                <input type="file" name="reportpdf" class="form-control">
+            </div>
 
-            </br>
             </br>
             <div class="col-md 6">
                 <button type="submit" class="btn btn-primary">Upload report</button>

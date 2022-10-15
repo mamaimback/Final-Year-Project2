@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -71,10 +71,18 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //cal
 Route::prefix('doctor')->middleware(['auth','isDoctor'])->group(function() { 
 
     Route::get('dochome ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_home']);
-    Route::get('docappointment ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_appointment_index']);
-    Route::get('docupload/{bookingHistory_bookinghistID}',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_upload_index']);
-    
 
+    Route::get('docappointment ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_appointment_index']);
+
+    Route::get('docupload/{bookingHistory_bookinghistID}',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_upload_index']);
+
+    Route::post('docconfirmupload',[App\Http\Controllers\Doctor\DoctorHomeController::class, 'upload_store']);
+
+    Route::get('docreporthist',[App\Http\Controllers\Doctor\DoctorHomeController::class, 'report_index']);
+
+    Route::get('download/{reportpdf}',[App\Http\Controllers\Doctor\DoctorHomeController::class, 'download']);
+    
+    Route::get('view/{patientreportID}',[App\Http\Controllers\Doctor\DoctorHomeController::class, 'view']);
 
 
 });

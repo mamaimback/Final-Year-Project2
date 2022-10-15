@@ -41,7 +41,6 @@
 
             <div class= "mb-3">
                 <label for="">Doctor Gender</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
                 <select name="gender" class="form-control">
                 <option value="M">Male</option>
                 <option value="F">Female</option>
@@ -55,7 +54,6 @@
 
             <div class= "mb-3">
                 <label for="">Doctor Specialist</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
                 <select name="Specialist" class="form-control">
                 <option value="Cardiologists">Cardiologists</option>
                 <option value="Anesthesiologists">Anesthesiologists</option>
@@ -66,7 +64,7 @@
             </div>
 
             <div class= "mb-3">
-                <label for="">Doctor Profile Pitcure</label>
+                <label for="">Doctor Profile Picture</label>
                 <input type="file" name="image_profile" class="form-control">
             </div>
 
@@ -81,15 +79,13 @@
                 <option value="12pm-3pm">12pm-3pm</option>
                 <option value="3pm-6pm">3pm-6pm</option>
                 <option value="6pm-9pm">6pm-9pm</option>
-                <option value="9pm-12am">6pm-9pm</option>
+                <option value="9pm-12am">9pm-12am</option>
                 </select>
             </div>
 
-            
 
             <div class= "mb-3">
                 <label for="">Doctor Availability	</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
                 <select name="doctor_availability" class="form-control">
                 <option value="1">Available</option>
                 <option value="0">Not Available</option>
@@ -98,7 +94,6 @@
 
             <div class= "mb-3">
                 <label for="">Venue</label>
-                <!-- <input type="text" name="foodCategories" class="form-control"> -->
                 <select name="venues" class="form-control">
                 <option value="A">Block A101</option>
                 <option value="B">Block B101</option>
@@ -109,7 +104,7 @@
             </br>
             </br>
             <div class="col-md 6">
-                <button type="submit" class="btn btn-primary">Add Doctor Infomration</button>
+                <button type="submit" class="btn btn-primary">Add Doctor Information</button>
             </div>
 
         </form>

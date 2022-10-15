@@ -27,7 +27,8 @@ class bookingHistory extends Model
         'specialist', 
         'bookingDate',
         'bookingTime',
-        'venue'
+        'venue',
+        'upload_status',
     ];
     public $timestamps = false;
 }

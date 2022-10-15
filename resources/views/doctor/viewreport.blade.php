@@ -29,21 +29,13 @@
     </div>
   </nav>
   <!-- Navbar -->
-<!-- Hero -->
-<div class="p-5 text-center bg-image rounded-3" style="
-    background-image: url('https://images.pexels.com/photos/1692693/pexels-photo-1692693.jpeg?auto=compress&cs=tinysrgb&w=1600');
-    height: 400px;
-  ">
 
-    <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-white">
-        <h1 class="mb-3"> Welcome DR. {{$doc_name}} </h1>
-        <h4 class="mb-3">Hope you are having a great day</h4>
-        <a class="btn btn-outline-light btn-lg" href="#" role="button">View your appointments here</a>
-      </div>
+  <div class="container" style="margin-top :60px;">
+  <div class="card border-danger mb-3 mx-auto">
+    <iframe height="1000" width ="1000"src="/uploads/patientreport/{{$key->reportpdf}}" class="card-img-top" alt="..."></iframe>
     </div>
+  
+
   </div>
-</div>
-<!-- Hero -->
-</header>
+  
 @endsection
