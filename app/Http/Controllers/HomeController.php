@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Models\doctorCategory;
 use Illuminate\Http\Request;
@@ -39,8 +40,9 @@ class HomeController extends Controller
 
     public function p_make_index($doctorcategory_exDoctorID)
     {   
+        $ori_email=Auth::user()->email;
         $doctorcategory =doctorcategory::find($doctorcategory_exDoctorID);
-        return view('patientmakebooking',compact('doctorcategory'));
+        return view('patientmakebooking',compact('doctorcategory','ori_email'));
     }
 
     public function doc_detail_index()
@@ -53,4 +55,6 @@ class HomeController extends Controller
     {
         return view('testing');
     }
+
+    
 }

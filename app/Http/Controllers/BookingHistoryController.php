@@ -17,6 +17,7 @@ class BookingHistoryController extends Controller
         
         $data = $request->validated();
         $bookingHistory = new bookingHistory;
+        
 
         $bookingHistory->patientName = $data['patientName'];
         $bookingHistory->patientEmail = $data['patientEmail'];
@@ -34,5 +35,12 @@ class BookingHistoryController extends Controller
 
         
         return redirect('user/patientbookapp')->with('message','Booking made successfully!');
+    }
+
+    public function myapp_index()
+    {
+        $bookingHistory = bookingHistory::where('patientEmail','=',Auth::user()->email)->get();
+        //$doctorcategory = doctorcategory::where('doctor_availability', '=',1)->where('availableDate','>',$currenttime)->get();
+        return view('myappointment' ,compact('bookingHistory'));
     }
 }

@@ -63,7 +63,7 @@
 
             <div class= "mb-3">
                 <label for="">Your email</label>
-                <input type="text" name="patientEmail" class="form-control">
+                <input type="text" name="patientEmail" value="{{$ori_email}}" class="form-control" readonly="readonly">
             </div>
 
             <div class= "mb-3">

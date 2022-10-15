@@ -23,7 +23,7 @@
             <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> My appointment🗓️   |</a>
+            <a class="nav-link" href="{{url('user/myappointment')}}"> My appointment🗓️   |</a>
           </li>
         </ul>
       </div>
@@ -41,7 +41,7 @@
       <div class="text-white">
         <h1 class="mb-3"> Consult us </h1>
         <h4 class="mb-3">before it's too late</h4>
-        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Book appoinment now!</a>
+        <a class="btn btn-outline-light btn-lg" href="{{url('user/patientbookapp')}}" role="button">Book appoinment now!</a>
       </div>
     </div>
   </div>
