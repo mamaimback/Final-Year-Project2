@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Models\User; //import user from model
+use App\Models\bookingHistory;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\UserFormRequest;
 use Illuminate\Http\Request;
@@ -70,6 +71,28 @@ class UserController extends Controller
             return redirect('admin/users')->with('message','User Deleted Succesfully!');
         }else{
             return redirect('admin/users')->with('message','User Not Deleted Succesfully!');
+        }
+    }
+
+    public function reserve_index()
+    {
+        $bookingHistory= bookingHistory::all();
+        return view('admin.reservations', compact('bookingHistory'));
+
+    }
+
+    public function destroy_reservation(Request $request)
+    {
+        $bookingHistory = bookingHistory::find($request->reservation_delete_id);
+
+        if($bookingHistory)
+        {
+            $bookingHistory->delete();
+
+            return redirect('admin/reservation')->with('message','Appointment Deleted Succesfully!');
+
+        }else{
+            return redirect('admin/reservation')->with('message','Appointment Not Deleted Succesfully!');
         }
     }
 }

@@ -24,7 +24,11 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 User Management
                             </a>
-                            
+
+                            <a class="nav-link" href="{{url('admin/reservation')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                All Reserved Appointment 
+                            </a>
                            
                         </div>
                     </div>

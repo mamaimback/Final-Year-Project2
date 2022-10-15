@@ -72,6 +72,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //cal
 
     Route::post('delete-user',[App\Http\Controllers\Admin\UserController::class, 'destroy']);
 
+    Route::get('reservation',[App\Http\Controllers\Admin\UserController::class,'reserve_index']); 
+
+    Route::post('delete-reservation',[App\Http\Controllers\Admin\UserController::class, 'destroy_reservation']);
+
 });
 
 Route::prefix('doctor')->middleware(['auth','isDoctor'])->group(function() { 
