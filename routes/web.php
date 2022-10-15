@@ -10,11 +10,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::prefix('user')->middleware(['auth','isUser'])->group(function() { 
+
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+
     Route::get('/patientbookapp',[App\Http\Controllers\HomeController::class, 'p_index']);
+
     Route::get('/patientmakebooking/{doctorCategory_exDoctorID}',[App\Http\Controllers\HomeController::class, 'p_make_index']);
+
     Route::get('/doctorsdetails',[App\Http\Controllers\HomeController::class, 'doc_detail_index']);
+
     Route::post('/addconfirmedbooking',[App\Http\Controllers\BookingHistoryController::class, 'Bkstore']);
+
     Route::get('/myappointment',[App\Http\Controllers\BookingHistoryController::class, 'myapp_index']);
 
 //Route::get('/testing',[App\Http\Controllers\HomeController::class, 'testing'])->name('testing');
@@ -64,7 +70,11 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //cal
 
 Route::prefix('doctor')->middleware(['auth','isDoctor'])->group(function() { 
 
-    Route::get('/testing',[App\Http\Controllers\Doctor\DoctorHomeController::class,'testing']);
+    Route::get('dochome ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_home']);
+    Route::get('docappointment ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_appointment_index']);
+    Route::get('docupload/{bookingHistory_bookinghistID}',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_upload_index']);
+    
+
 
 
 });

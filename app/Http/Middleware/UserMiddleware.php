@@ -30,7 +30,7 @@ class UserMiddleware
                 }
 
                 else{
-                    return redirect('/doctor/testing')->with('status','Access Denied! You are not user');  //for doctor triying to enter admin direct back to homepage
+                    return redirect('/doctor/dochome')->with('status','Access Denied! You are not user');  //for doctor triying to enter admin direct back to homepage
                 }
             }
         }

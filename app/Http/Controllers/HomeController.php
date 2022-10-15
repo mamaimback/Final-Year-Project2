@@ -51,10 +51,7 @@ class HomeController extends Controller
         return view('doctorsdetails', compact('doctorcategory'));
     }
 
-    public function testing()
-    {
-        return view('testing');
-    }
+    
 
     
 }

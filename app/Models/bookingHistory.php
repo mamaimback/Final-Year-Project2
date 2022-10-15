@@ -11,7 +11,14 @@ class bookingHistory extends Model
 
     protected $table = 'bookinghistory';
 
+    protected $primaryKey = 'bookinghistID';
+
+    public $incrementing = false;
+ 
+    protected $keyType = 'string';
+
     protected $fillable = [
+        'bookinghistID',
         'patientName',
         'patientEmail',
         'patientPhone',

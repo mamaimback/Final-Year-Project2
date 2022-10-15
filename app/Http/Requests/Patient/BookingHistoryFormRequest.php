@@ -26,7 +26,7 @@ class BookingHistoryFormRequest extends FormRequest
         $rules= [
             'patientName' => [
                 'required',
-                'string',
+                'regex:/^[a-zA-Z\s]*$/',
                 'max:200'
             ],
             'patientEmail' => [
