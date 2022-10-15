@@ -21,7 +21,10 @@
             <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> My appointment🗓️   |</a>
+            <a class="nav-link" href="{{url('user/myappointment')}}"> My appointment🗓️   |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('user/myreport')}}"> My reports🗓️   |</a>
           </li>
         </ul>
       </div>

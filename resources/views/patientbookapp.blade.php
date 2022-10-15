@@ -3,7 +3,6 @@
 
 
 
-
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -25,12 +24,17 @@
             <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> My appointment🗓️   |</a>
+            <a class="nav-link" href="{{url('user/myappointment')}}"> My appointment🗓️   |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('user/myreport')}}"> My reports🗓️   |</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
+
   <!-- Navbar -->
 
   <div class="container-fluid px-4">
@@ -93,5 +97,13 @@
 
        
 </div>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © made by:
+    <a class="text-dark" href="WWW.heartcenter.com">Heart center healthcare providers</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 @endsection

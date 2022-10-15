@@ -29,6 +29,7 @@
     </div>
   </nav>
   <!-- Navbar -->
+</header>
 <!-- Hero -->
 <div class="p-5 text-center bg-image rounded-3" style="
     background-image: url('https://images.pexels.com/photos/1692693/pexels-photo-1692693.jpeg?auto=compress&cs=tinysrgb&w=1600');
@@ -46,4 +47,17 @@
 </div>
 <!-- Hero -->
 </header>
+
+
+
+
+
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © made by:
+    <a class="text-dark" href="WWW.heartcenter.com">Heart center healthcare providers</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 @endsection

@@ -25,10 +25,14 @@
           <li class="nav-item">
             <a class="nav-link" href="{{url('user/myappointment')}}"> My appointment🗓️   |</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('user/myreport')}}"> My reports🗓️   |</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
   <!-- Navbar -->
 
   <!-- Hero -->

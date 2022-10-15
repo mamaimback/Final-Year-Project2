@@ -23,6 +23,12 @@ Route::prefix('user')->middleware(['auth','isUser'])->group(function() {
 
     Route::get('/myappointment',[App\Http\Controllers\BookingHistoryController::class, 'myapp_index']);
 
+    Route::get('/myreport',[App\Http\Controllers\BookingHistoryController::class, 'myreport_index']);
+
+    Route::get('download/{reportpdf}',[App\Http\Controllers\BookingHistoryController::class, 'download']);
+    
+    Route::get('view/{patientreportID}',[App\Http\Controllers\BookingHistoryController::class, 'view']);
+
 //Route::get('/testing',[App\Http\Controllers\HomeController::class, 'testing'])->name('testing');
 });
 

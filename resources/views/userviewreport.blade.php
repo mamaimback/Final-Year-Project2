@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -34,13 +34,14 @@
 </header>
   <!-- Navbar -->
 
-  <div class="container" style="margin-top :60px;">
+<div class="container" style="margin-top :60px;">
   <div class="card border-danger mb-3 mx-auto">
     <iframe height="1000" width ="1000"src="/uploads/patientreport/{{$key->reportpdf}}" class="card-img-top" alt="..."></iframe>
     </div>
   
 
   </div>
+
   <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -49,5 +50,5 @@
   </div>
   <!-- Copyright -->
 </footer>
-  
+
 @endsection

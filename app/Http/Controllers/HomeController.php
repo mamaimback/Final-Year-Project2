@@ -50,8 +50,8 @@ class HomeController extends Controller
         $doctorcategory = doctorcategory::all();
         return view('doctorsdetails', compact('doctorcategory'));
     }
-
     
 
     
+
 }

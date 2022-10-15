@@ -16,23 +16,23 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="{{url('user/home')}}">Home🏠   |</a>
+            <a class="nav-link" aria-current="page" href="{{url('doctor/dochome')}}">Home🏠   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('user/patientbookapp')}}"> Book appointment📅   |</a>
+            <a class="nav-link" href="{{url('doctor/docappointment')}}"> My patient appointment📅   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
+            <a class="nav-link" href="#"> Heart disease prediction module❤️  |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> My appointment🗓️   |</a>
+            <a class="nav-link" href="{{url('doctor/docreporthist')}}"> Uploaded patient report📖   |</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   <!-- Navbar -->
-
+</header>
   <div class="container-fluid px-4">
 
 
@@ -100,5 +100,13 @@
 
        
 </div>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © made by:
+    <a class="text-dark" href="WWW.heartcenter.com">Heart center healthcare providers</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
 @endsection

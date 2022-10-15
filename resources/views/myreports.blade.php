@@ -1,6 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
+
+
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
@@ -13,29 +14,33 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="{{url('doctor/dochome')}}"> Home🏠    |</a>
+            <a class="nav-link" aria-current="page" href="{{url('user/home')}}">Home🏠   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('doctor/docappointment')}}"> My patient appointment📅   |</a>
+            <a class="nav-link" href="{{url('user/patientbookapp')}}"> Book appointment📅   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Heart disease prediction module❤️    |</a>
+            <a class="nav-link" href="{{url('user/doctorsdetails')}}"> Doctors on-call🧑‍⚕️   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('doctor/docreporthist')}}"> Uploaded patient report📖   |</a>
+            <a class="nav-link" href="{{url('user/myappointment')}}"> My appointment🗓️   |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('user/myreport')}}"> My reports🗓️   |</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+</header>
   <!-- Navbar -->
 
-  <div class="container-fluid px-4">
+<div class="container-fluid px-4">
 
 
 <div class="card mt-4">
      <div class="card-header">
-           <h4>My patient appointment slots📅</h4>
+           <h4>My report history📖</h4>
      </div>
      <div class="card-body">
 
@@ -49,35 +54,34 @@
                     
                     <th>Patient Name</th>
                     <th>Patient Email</th>
-                    <th>Patient Phone no.</th>
-                    <th>Patient Gender</th>  
-                    <th>Appointment Date</th>
-                    <th>Appointment Time</th>
-                    <th>Venue</th>
-                    <th>Prediction report status</th>
-                    <th>Actions</th>
+                    <th>Patient Gender</th>
+                    <th>Patient booking date</th>  
+                    <th>Patient booking time</th>
+                    <th>Booking venue</th>
+                    <th>Report result</th>
+                    <th>View</th>
+                    <th>Download</th>
+                    
                </tr>
 
           </thead>
 
           <tbody>
 
-            @foreach($bookingHistory as $item )
+            @foreach($patientReport as $item )
 
                 <tr>
-                     
+                    
                      <td>{{$item->patientName}}</td>
                      <td>{{$item->patientEmail}}</td>
-                     <td>{{$item->patientPhone}}</td>
                      <td>{{$item->patientGender}}</td>
                      <td>{{$item->bookingDate}}</td>
                      <td>{{$item->bookingTime}}</td>
                      <td>{{$item->venue}}</td>
-                     <td>{{$item->upload_status}}</td>
-                     <td> 
-                         <a href="{{url('doctor/docupload/'.$item->bookinghistID) }}" class="btn btn-warning btn-lg " >Upload patient report</a>
-                         <!--<a href="{{url('user/patientmakebooking/'.$item->exDoctorID) }}" class="btn btn-warning btn-lg " >Make booking</a> -->
-                     </td>
+                     <td>{{$item->reportpdf}}</td>
+                     <td><a href="{{url('user/view/'.$item->patientreportID)}}">View</a></td>
+                     <td><a href="{{url('user/download/'.$item->reportpdf)}}">Download</a></td>
+                     
                 </tr>
                 @endforeach
            
@@ -94,9 +98,6 @@
 
    
 </div>
-
-
-
 <footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -105,5 +106,6 @@
   </div>
   <!-- Copyright -->
 </footer>
+
 
 @endsection
