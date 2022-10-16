@@ -58,6 +58,7 @@
                 <select name="role_as" class="form-control"> 
                 <option value="1" {{ $user->role_as == '1' ? 'selected' :''}}>Admin</option>
                 <option value="0" {{ $user->role_as == '0' ? 'selected' :''}}>Patient</option>
+                <option value="2" {{ $user->role_as == '2' ? 'selected' :''}}>Doctor</option>
             
                 </select>
             </div>
