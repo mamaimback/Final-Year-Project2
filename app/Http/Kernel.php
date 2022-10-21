@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'isAdmin' => \App\Http\Middleware\AdminMiddleware::class, //check 0 or 1 and call class Adminmiddleware
         'isDoctor'  => \App\Http\Middleware\DoctorMiddleware::class, //check 0 or 1 or 2 call Doctormiddleware auth
         'isUser'=> \App\Http\Middleware\UserMiddleware::class,
+        'isBan' => \App\Http\Middleware\CheckBanned::class,
     ];
 }

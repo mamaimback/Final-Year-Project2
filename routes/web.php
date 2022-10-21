@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::prefix('user')->middleware(['auth','isUser'])->group(function() { 
+Route::prefix('user')->middleware(['auth','isUser','isBan'])->group(function() { 
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
@@ -34,7 +34,7 @@ Route::prefix('user')->middleware(['auth','isUser'])->group(function() {
 
 //Route::get('/model',[])
 
-Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //calls laravel built in Auth with middleware to let only admin to access dashboard , isAdmin checks user roles
+Route::prefix('admin')->middleware(['auth','isAdmin','isBan'])->group(function() { //calls laravel built in Auth with middleware to let only admin to access dashboard , isAdmin checks user roles
 
     //admin dashboard page
     Route::get('/dashboard',[App\Http\Controllers\Admin\DashboardController::class,'index']);
@@ -78,7 +78,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() { //cal
 
 });
 
-Route::prefix('doctor')->middleware(['auth','isDoctor'])->group(function() { 
+Route::prefix('doctor')->middleware(['auth','isDoctor','isBan'])->group(function() { 
 
     Route::get('dochome ',[App\Http\Controllers\Doctor\DoctorHomeController::class,'doc_home']);
 
