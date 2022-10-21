@@ -11,11 +11,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-info text-white mb-4">
                                     <div class="card-body">
-                                        Total categories
-                                        <h2>{{$categories}}</h2>
+                                        Total Made Reservations
+                                        <h2>{{$bookings}}</h2>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="{{url('admin/category')}}">View Details</a>
+                                        <a class="small text-white stretched-link" href="{{url('admin/reservation')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -35,11 +35,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">
-                                        Primary Card
-                                        <h2>2</h2>
+                                        Total Doctors 
+                                        <h2>{{$doctors}}</h2>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <a class="small text-white stretched-link" href="{{url('admin/users')}}">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body">
-                                        Total admin
+                                        Total Admins
                                         <h2>{{$admins}}</h2>
                                     </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
