@@ -19,7 +19,7 @@
             <a class="nav-link" href="{{url('doctor/docappointment')}}"> My patient appointment📅   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Heart disease prediction module❤️    |</a>
+            <a class="nav-link" href="http://127.0.0.1:5000"> Heart disease prediction module❤️    |</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('doctor/docreporthist')}}"> Uploaded patient report📖   |</a>
@@ -40,7 +40,7 @@
       <div class="text-white">
         <h1 class="mb-3"> Welcome DR. {{$doc_name}} </h1>
         <h4 class="mb-3">Hope you are having a great day</h4>
-        <a class="btn btn-outline-light btn-lg" href="#" role="button">View your appointments here</a>
+        <a class="btn btn-outline-light btn-lg" href="{{url('doctor/docappointment')}}" role="button">View your appointments here</a>
       </div>
     </div>
   </div>

@@ -19,7 +19,7 @@
             <a class="nav-link" href="{{url('doctor/docappointment')}}"> My patient appointment📅   |</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"> Heart disease prediction module❤️    |</a>
+            <a class="nav-link" href="http://127.0.0.1:5000"> Heart disease prediction module❤️    |</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url('doctor/docreporthist')}}"> Uploaded patient report📖   |</a>
