@@ -84,11 +84,7 @@
 
          </div>
     </div>
-
-
-   
-
-       
+ 
 </div>
 @endsection
 
@@ -97,13 +93,13 @@
      $(document).ready(function(){
           $('.deleteUserBtn').click(function(e){
                e.preventDefault();
-               
               var usercategory_id = $(this).val();
               $('#user_id').val(usercategory_id);
               $('#deleteUserModal').modal('show');
           });
      });
      </script>
+
 @endsection
 
 

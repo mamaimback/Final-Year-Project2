@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        <img src="uploads/others/logo.png" alt="Hospital" width="400" height="222" class="center">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
                 @if (session('error'))
@@ -15,6 +19,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}"> <!--routing to other pages-->
                         @csrf
+                        
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>

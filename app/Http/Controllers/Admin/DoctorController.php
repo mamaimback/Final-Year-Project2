@@ -41,14 +41,19 @@ class DoctorController extends Controller
         $doctorcategory->phone = $data['phone'];
         $doctorcategory->doctorName= $data['doctorName'];
         $doctorcategory->doctordescription = $data['doctordescription'];
-       
 
-        if($request->hasfile('certificate')){
-            $file = $request->file('certificate');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move('uploads/doctorcategory/', $filename );
-            $doctorcategory->certificate= $filename;
+        //validation on the record exists
+       
+        $doctorName = doctorcategory::where('doctorName', '=', $data['doctorName'])->where('availableDate', '=', $data['availableDate'])->where('availableTime', '=', $data['availableTime'])->get()->first();
+        if ($doctorName !== null) {
+            return redirect('admin/doctorcategory')->with('message','Doctor record exists!');
         }
+
+        $phone = doctorcategory::where('phone', '=', $data['phone'])->get()->first();
+        if ($phone !== null) {
+            return redirect('admin/doctorcategory')->with('message','Doctor phone record exists!');
+        }
+        
 
         $doctorcategory->Specialist = $data['Specialist'];
 
@@ -88,12 +93,7 @@ class DoctorController extends Controller
         $doctorcategory->doctorName= $data['doctorName'];
         $doctorcategory->doctordescription = $data['doctordescription'];
        
-        if($request->hasfile('certificate')){
-            $file = $request->file('certificate');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move('uploads/doctorcategory/', $filename );
-            $doctorcategory->certificate= $filename;
-        }
+       
 
         //pitcure
         if($request->hasfile('image_profile')){
@@ -127,12 +127,7 @@ class DoctorController extends Controller
         $doctorcategory->doctorName= $data['doctorName'];
         $doctorcategory->doctordescription = $data['doctordescription'];
        
-        if($request->hasfile('certificate')){
-            $file = $request->file('certificate');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move('uploads/doctorcategory/', $filename );
-            $doctorcategory->certificate= $filename;
-        }
+       
 
         //pitcure
         if($request->hasfile('image_profile')){
@@ -150,7 +145,7 @@ class DoctorController extends Controller
         $doctorcategory->update();
         
 
-        return redirect('admin/bktimeslotcategory')->with('message','Doctor Edited Succesfully!');
+        return redirect('admin/doctorcategory')->with('message','Doctor Edited Succesfully!');
 
     }
 

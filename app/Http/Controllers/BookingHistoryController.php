@@ -35,7 +35,7 @@ class BookingHistoryController extends Controller
         $doctorcategory = doctorcategory::where('doctorName', '=',$data['doctorName'])->where('availableDate','=',$data['bookingDate'])->where('availableTime','=',$data['bookingTime'])->update(array('doctor_availability' => '0'));
 
         
-        return redirect('user/patientbookapp')->with('message','Booking made successfully!');
+        return redirect('user/myappointment')->with('message','Booking made successfully!');
     }
 
     public function myapp_index()

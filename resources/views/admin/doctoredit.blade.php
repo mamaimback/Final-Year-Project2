@@ -48,11 +48,6 @@
                 </select>
             </div>
 
-            <div class= "mb-3">
-                <label for="">Doctor Certificate</label>
-                <input type="file" name="certificate" class="form-control">
-            </div>
-
               <div class= "mb-3">
                 <label for="">Doctor Specialist</label>
                 <!-- <input type="text" name="foodCategories" class="form-control"> -->
@@ -81,7 +76,7 @@
                 <option value="12pm-3pm">12pm-3pm</option>
                 <option value="3pm-6pm">3pm-6pm</option>
                 <option value="6pm-9pm">6pm-9pm</option>
-                <option value="9pm-12am">6pm-9pm</option>
+                <option value="9pm-12am">9pm-12am</option>
                 </select>
             </div>
 

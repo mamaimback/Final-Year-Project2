@@ -23,7 +23,6 @@ class doctorCategory extends Model
         'phone',
         'doctorName', 
         'doctordescription', 
-        'certificate', 
         'Specialist',
         'image_profile',
         'availableDate',

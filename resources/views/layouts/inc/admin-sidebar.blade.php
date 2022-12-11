@@ -9,7 +9,7 @@
                             </a>
                             <div class="sb-sidenav-menu-heading">Management</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                <div class="sb-nav-link-icon"></i></div>
                                     Doctor Management
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
@@ -21,12 +21,12 @@
                                 </nav>
                             </div>
                             <a class="nav-link" href="{{url('admin/users')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="sb-nav-link-icon"></div>
                                 User Management
                             </a>
 
                             <a class="nav-link" href="{{url('admin/reservation')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                <div class="sb-nav-link-icon"></div>
                                 All Reserved Appointment 
                             </a>
                            

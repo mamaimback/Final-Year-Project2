@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        <img src="uploads/others/logo.png" alt="Hospital" width="300" height="222" class="center">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
                 <div class="card-body">

@@ -47,11 +47,7 @@
                 </select>
             </div>
 
-            <div class= "mb-3">
-                <label for="">Doctor Certificate</label>
-                <input type="file" name="certificate" class="form-control">
-            </div>
-
+           
             <div class= "mb-3">
                 <label for="">Doctor Specialist</label>
                 <select name="Specialist" class="form-control">

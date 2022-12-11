@@ -33,14 +33,14 @@ class DoctorFormRequest extends FormRequest
 
             'phone' => [
                 'required',
-                'regex:/(01)[0-9]{8}/',
+                'regex:/^(01)[0-46-9]*[0-9]{7,8}$/',
                 'max:200'
                 
             ],
 
             'doctorName' => [
                 'required',
-                'string',
+                'regex:/^[\pL\s\-]+$/u',
                 
             ],
 
@@ -51,12 +51,7 @@ class DoctorFormRequest extends FormRequest
                 
             ],
 
-            'certificate' => [
-                'required',
-                //'mimes:pdf',
-               // 'max:10000',
-                
-            ],
+    
             'Specialist' => [
                 'required',
             ],

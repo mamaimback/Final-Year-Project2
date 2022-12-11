@@ -19,7 +19,6 @@ class CreateExtraDoctorsTable extends Migration
             $table->string('phone');
             $table->string('doctorName', 50);
             $table->string('doctordescription', 255);
-            $table->string('certificate', 50);
             $table->string('Specialist', 50);
             $table->string('image_profile', 50);
             $table->date('availableDate');

@@ -76,6 +76,13 @@
   }
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -4446,6 +4453,10 @@ textarea.form-control-lg {
   border-top: 0;
   border-bottom: 0;
 }
+
+/* css for hover effect in navbar */
+
+
 .navbar-expand .offcanvas-body {
   display: flex;
   flex-grow: 0;
@@ -4529,9 +4540,9 @@ textarea.form-control-lg {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color:  rgba(227, 197, 197, 0.125);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 2px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }
 .card > hr {
@@ -4572,7 +4583,8 @@ textarea.form-control-lg {
 }
 
 .card-text:last-child {
-  margin-bottom: 0;
+  margin-bottom: 0; 
+  
 }
 
 .card-link + .card-link {
@@ -4582,7 +4594,7 @@ textarea.form-control-lg {
 .card-header {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(26, 20, 20, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-header:first-child {
@@ -4591,7 +4603,7 @@ textarea.form-control-lg {
 
 .card-footer {
   padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: rgba(255, 255, 255, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 .card-footer:last-child {
@@ -11480,6 +11492,7 @@ body {
   flex-shrink: 0;
 }
 
+
 .sb-sidenav-dark {
   background-color: #212529;
   color: rgba(255, 255, 255, 0.5);
@@ -11497,9 +11510,6 @@ body {
   color: rgba(255, 255, 255, 0.25);
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link:hover {
-  color: #fff;
-}
-.sb-sidenav-dark .sb-sidenav-menu .nav-link.active {
   color: #fff;
 }
 .sb-sidenav-dark .sb-sidenav-menu .nav-link.active .sb-nav-link-icon {
@@ -11698,4 +11708,27 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+p{
+  font-family: "Karla", Arial, "Noto Sans SC", sans-serif;
+  text-align: right;
+  font-size: 12px;
+}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 56px;   /* Height of the footer */
+}
+
+
+.footer2{
+  position: relative;
+  bottom: 0;
+  margin-bottom: -25px;
+  width: 100%;
+  height: 56px;   /* Height of the footer */
+
 }
